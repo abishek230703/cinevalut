@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineVault | Premium Streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar glass">
+    <a href="#" class="logo">CINE<span>VAULT</span></a>
+    <nav class="menu">
+      <a class="menu-link active" href="#hero">Home</a>
+      <a class="menu-link" href="#trending">Trending</a>
+      <a class="menu-link" href="#movies">Movies</a>
+      <a class="menu-link" href="#footer">My List</a>
+    </nav>
+    <div class="search-wrap">
+      <button id="searchToggleBtn" class="search-toggle" aria-label="Open search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.5 4a6.5 6.5 0 1 0 4.08 11.56l4.43 4.43a1 1 0 0 0 1.41-1.41l-4.43-4.43A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/>
+        </svg>
+      </button>
+      <input id="searchInput" class="search-input" type="text" placeholder="Search movies..." aria-label="Search movies">
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-bg hero-bg-a"></div>
+    <div class="hero-bg hero-bg-b"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-layout">
+      <div class="hero-content glass">
+        <span id="heroGenre" class="genre-pill">Action</span>
+        <h1 id="heroTitle">Vikram</h1>
+        <p id="heroDescription">
+          A black-ops squad investigates a chain of murders, uncovering a covert war led by an
+          elusive former commander.
+        </p>
+        <div id="heroMeta" class="hero-meta">⭐ 4.8 | 2022 | 2h 55m</div>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" id="playBtn">Play</button>
+          <button class="btn btn-secondary" id="downloadBtn">Download</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="hero-arrow hero-arrow-left" id="prevSlideBtn" aria-label="Previous movie">‹</button>
+    <button class="hero-arrow hero-arrow-right" id="nextSlideBtn" aria-label="Next movie">›</button>
+    <div id="sliderDots" class="slider-dots slider-dots-hero" aria-label="Movie slider dots"></div>
+  </section>
+
+  <main>
+    <section id="trending" class="section">
+      <div class="section-top">
+        <h2>Trending Now</h2>
+      </div>
+      <div id="trendingRow" class="movie-row"></div>
+    </section>
+
+    <section id="movies" class="section">
+      <div class="section-top">
+        <h2>All Movies</h2>
+        <div id="categoryFilters" class="category-filters"></div>
+      </div>
+      <div id="movieGrid" class="movie-grid"></div>
+    </section>
+
+    <section id="series" class="section">
+      <div class="section-top">
+        <h2>Series</h2>
+      </div>
+      <div id="seriesGrid" class="movie-grid"></div>
+    </section>
+  </main>
+
+  <div id="movieModal" class="movie-modal" aria-hidden="true">
+    <button id="closeModalBtn" class="modal-close" aria-label="Close details">✕</button>
+    <div class="modal-overlay"></div>
+    <div id="modalContent" class="modal-content"></div>
+  </div>
+
+  <footer id="footer">
+    <p class="footer-logo">CINE<span>VAULT</span></p>
+    <p>© 2026 All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
