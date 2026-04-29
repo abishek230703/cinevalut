@@ -8,7 +8,7 @@ const movies = [
     size: "7.2 GB",
     downloads: "4.2M",
     quality: "4K",
-    poster: "image/vikram.jpg",
+    poster: "image/Vikram.jpg",
     banner: "image/vikram-bg.jpg",
     description: "A black-ops investigation reveals a hidden war led by a ghost from the past.",
     crew: "Cast: Kamal Haasan, Vijay Sethupathi, Fahadh Faasil | Dir: Lokesh Kanagaraj"
